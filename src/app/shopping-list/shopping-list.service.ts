@@ -1,4 +1,5 @@
 import { Subject } from 'rxjs';
+import { Recipe } from '../recipes/recipe.model';
 
 import { Ingredient } from '../shared/ingredient.model';
 
@@ -39,6 +40,14 @@ export class ShoppingListService {
   deleteIngredient(index: number) {
     this.ingredients.splice(index, 1);
     this.ingredientsChanged.next(this.ingredients.slice());
+  }
+
+  addRecipe(recipe: Recipe) {
+
+  }
+
+  updateRecipe(index: number, recipe: Recipe) {
+
   }
 
 }
